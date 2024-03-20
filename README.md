@@ -16,6 +16,5 @@ If you are reading this it looks like you are looking to add an egg to your serv
 ## Contributors
 Thanks to all contributors for making this eggs for PowerNukkitX:
 
-- [@SenseiTarzan](https://github.com/SenseiTarzan)
 - [@AzaleeX](https://github.com/AzaleeX)
 
