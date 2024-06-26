@@ -5,8 +5,10 @@
 
 If you are reading this it looks like you are looking to add an egg to your server.
 
-> [!CAUTION]
-> If you wish to use **PowerNukkitX V2**, you should use the file [`egg-powernukkitx-v2.json`](https://github.com/PowerNukkitX/PowerNukkitX-Eggs/blob/master/egg-powernukkitx-v2.json) instead of the `egg-powernukkitx.json` file.
+>[CAUTION]
+> The PowerNukkitX team has decided to discontinue support for version 1 of PowerNukkitX. This requires you to migrate to PowerNukkitX V2.
+
+
 1. Download the json file named [egg-powernukkitx.json](https://github.com/PowerNukkitX/PowerNukkitX-Eggs/blob/master/egg-powernukkitx.json) located in the repository below.
 2. In your panel go to the ```Nests``` section in the admin part of the panel
 3. Click the green ```Import Egg``` button
@@ -18,5 +20,4 @@ If you are reading this it looks like you are looking to add an egg to your serv
 Thanks to all contributors for making this eggs for PowerNukkitX:
 
 - [@AzaleeX](https://github.com/AzaleeX)
-- [@JblusItsMe](https://github.com/JblusItsMe)
 
