@@ -5,7 +5,7 @@
 
 If you are reading this it looks like you are looking to add an egg to your server.
 
->[CAUTION]
+> [!CAUTION]
 > The PowerNukkitX team has decided to discontinue support for version 1 of PowerNukkitX. This requires you to migrate to PowerNukkitX V2.
 
 
