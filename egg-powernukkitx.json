@@ -1,29 +1,28 @@
 {
-    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PANEL",
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
     "meta": {
-        "version": "PLCN_v1",
-        "update_url": "https:\/\/raw.githubusercontent.com\/PowerNukkitX\/PowerNukkitX-Eggs\/refs\/heads\/master\/egg-powernukkitx.json"
+        "version": "PTDL_v2",
+        "update_url": "https://raw.githubusercontent.com/PowerNukkitX/PowerNukkitX-Eggs/refs/heads/master/egg-powernukkitx.json"
     },
-    "exported_at": "2025-02-23T20:13:51+00:00",
+    "exported_at": "2025-03-23T17:19:28+00:00",
     "name": "PowerNukkitX",
     "author": "powernukkitx@github.com",
-    "uuid": "d1e561d8-a602-4c43-b4a5-228d2885a85e",
-    "description": "PowerNukkitX support for Pterodactyl",
-    "features": [],
+    "description": "PowerNukkitX Pterodactyl Egg",
+    "features": null,
     "docker_images": {
-        "ghcr.io\/parkervcp\/yolks:debian": "ghcr.io\/parkervcp\/yolks:debian"
+        "ghcr.io\/pterodactyl\/yolks:java_21": "ghcr.io\/pterodactyl\/yolks:java_21"
     },
     "file_denylist": [],
-    "startup": ".\/java-lib\/bin\/java -Dfile.encoding=UTF-8 -Djansi.passthrough=true -Dterminal.ansi=true -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+EnableJVMCI --add-opens java.base\/java.lang=ALL-UNNAMED --add-opens java.base\/java.io=ALL-UNNAMED -jar powernukkitx-shaded.jar",
+    "startup": "java -Dfile.encoding=UTF-8 -Djansi.passthrough=true -Dterminal.ansi=true -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+EnableJVMCI --add-opens java.base\/java.lang=ALL-UNNAMED --add-opens java.base\/java.io=ALL-UNNAMED -jar powernukkitx-shaded.jar",
     "config": {
-        "files": "{\n    \"server.properties\": {\n        \"parser\": \"properties\",\n        \"find\": {\n            \"server-ip\": \"0.0.0.0\",\n            \"enable-query\": \"true\",\n            \"server-port\": \"{{server.allocations.default.port}}\"\n        }\n    },\n    \"nukkit.yml\": {\n        \"parser\": \"yml\",\n        \"find\": {\n            \"settings.language\": \"eng\"\n        }\n    }\n}",
+        "files": "{\r\n    \"server.properties\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"server-ip\": \"0.0.0.0\",\r\n            \"enable-query\": \"true\",\r\n            \"server-port\": \"{{server.allocations.default.port}}\"\r\n        }\r\n    },\r\n    \"nukkit.yml\": {\r\n        \"parser\": \"yml\",\r\n        \"find\": {\r\n            \"settings.language\": \"eng\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \")! For help, type \"\r\n}",
         "logs": "{}",
         "stop": "stop"
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\napt-get update\r\napt-get install -y wget jq file tar unzip zip openssl\r\nmkdir -p \/mnt\/server\/ # Not required. Only here for parkervcp's local test setup\r\ncd \/mnt\/server || exit 1\r\nUPGRADE=\"no\"\r\nif [ -d \".\/java\" ]; then\r\nUPGRADE=\"yes\"\r\nfi\r\nwget https:\/\/download.oracle.com\/graalvm\/21\/latest\/graalvm-jdk-21_linux-x64_bin.tar.gz\r\nwget https:\/\/github.com\/PowerNukkitX\/PowerNukkitX\/releases\/download\/snapshot\/powernukkitx-shaded.jar\r\ntar -zxvf graalvm-jdk-21_linux-x64_bin.tar.gz\r\nrm graalvm-jdk-21_linux-x64_bin.tar.gz\r\nmv graalvm*\/ java-lib\/\r\nmv .\/target\/linux-x86\/pnx .\/ 2>&1 >\/dev\/null\r\nrm -fr target 2>&1 >\/dev\/null\r\nrm -fr java 2>&1 >\/dev\/null\r\nrm -fr tmp-GraalVM.tar.gz 2>&1 >\/dev\/null\r\ncat <<EOF\r\n----------------------------------------\r\n| |\r\n| PowerNukkitX Installation Done |\r\n| |\r\n----------------------------------------\r\nEOF",
+            "script": "#!\/bin\/bash\r\napt-get update\r\napt-get install -y wget >> \/dev\/null\r\nmkdir -p \/mnt\/server\/ \r\ncd \/mnt\/server\r\n\r\nwget https:\/\/github.com\/PowerNukkitX\/PowerNukkitX\/releases\/download\/snapshot\/powernukkitx-shaded.jar",
             "container": "debian:bullseye-slim",
             "entrypoint": "bash"
         }
