@@ -13,9 +13,9 @@
         "ghcr.io\/pterodactyl\/yolks:java_21": "ghcr.io\/pterodactyl\/yolks:java_21"
     },
     "file_denylist": [],
-    "startup": "java -Dfile.encoding=UTF-8 -Djansi.passthrough=true -Dterminal.ansi=true -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+EnableJVMCI --add-opens java.base\/java.lang=ALL-UNNAMED --add-opens java.base\/java.io=ALL-UNNAMED -jar powernukkitx-shaded.jar",
+    "startup": "java -Dfile.encoding=UTF-8 -Djansi.passthrough=true -Dterminal.ansi=true -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+EnableJVMCI -jar powernukkitx-shaded.jar",
     "config": {
-        "files": "{\r\n    \"server.properties\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"server-ip\": \"0.0.0.0\",\r\n            \"enable-query\": \"true\",\r\n            \"server-port\": \"{{server.allocations.default.port}}\"\r\n        }\r\n    },\r\n    \"nukkit.yml\": {\r\n        \"parser\": \"yml\",\r\n        \"find\": {\r\n            \"settings.language\": \"eng\"\r\n        }\r\n    }\r\n}",
+        "files": "{\r\n    \"pnx.yml\": {\r\n        \"parser\": \"yml\",\r\n        \"find\": {\r\n            \"settings.language\": \"eng\",\r\n            \"settings.ip\": \"0.0.0.0\",\r\n            \"settings.port\": \"{{server.allocations.default.port}}\",\r\n            \"network-settings.enableQuery\": true\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \")! For help, type \"\r\n}",
         "logs": "{}",
         "stop": "stop"
