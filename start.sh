@@ -36,10 +36,14 @@ fi
 echo "Starting PowerNukkitX..."
 
 exec java \
+  --add-opens java.base/java.lang=ALL-UNNAMED \
+  --add-opens java.base/java.lang.reflect=ALL-UNNAMED \
+  --add-opens java.base/java.io=ALL-UNNAMED \
+  --add-opens java.base/java.util=ALL-UNNAMED \
   -Dfile.encoding=UTF-8 \
   -Djansi.passthrough=true \
   -Dterminal.ansi=true \
   -XX:+UseG1GC \
   -XX:+UseStringDeduplication \
   -XX:MaxRAMPercentage=90.0 \
-  -jar "$JAR_NAME"
+  -jar powernukkitx-shaded.jar
