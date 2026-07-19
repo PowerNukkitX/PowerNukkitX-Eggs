@@ -1,2 +1,2 @@
-wget -O powernukkitx.jar -o /dev/null https://github.com/PowerNukkitX/PowerNukkitX/releases/download/snapshot/powernukkitx.jar
-java -Dfile.encoding=UTF-8 -Djansi.passthrough=true -Dterminal.ansi=true -XX:+UseZGC -XX:+ZGenerational -XX:+UseStringDeduplication --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.net=ALL-UNNAMED -jar powernukkitx.jar
+wget -O powernukkitx.jar -o /dev/null https://github.com/PowerNukkitX/PowerNukkitX/releases/download/nightly/powernukkitx.jar
+java -Dfile.encoding=UTF-8 -Djansi.passthrough=true -Dterminal.ansi=true -XX:+UseZGC -XX:+ZGenerational -XX:+UseStringDeduplication --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.net=ALL-UNNAMED -cp "powernukkitx.jar:libs/*" org.powernukkitx.PowerNukkitX --skip-setup --accept-license --language eng
