@@ -1,6 +1,9 @@
 # PowerNukkitX Eggs for Pterodactyl
 **The PowerNukkitX Egg** for [Pterodactyl](https://github.com/pterodactyl) is a preconfigured resource that makes it easy to deploy and manage ```PowerNukkitX servers``` through the **Pterodactyl control panel**. This egg provides an optimized default configuration and an intuitive user interface to facilitate the customization and management of PowerNukkitX servers.
 
+> ⚠️ **Warning:** Do not configure **CPU Pinning** for PowerNukkitX servers.  
+> Using CPU Pinning may prevent the server from starting correctly. Leave the CPU affinity settings managed by Pterodactyl to ensure proper startup and performance.
+
 ## Instructions for deploy
 
 If you are reading this it looks like you are looking to add an egg to your server.
@@ -16,4 +19,3 @@ If you are reading this it looks like you are looking to add an egg to your serv
 Thanks to all contributors for making this eggs for PowerNukkitX:
 
 - [@AzaleeX](https://github.com/AzaleeX)
-
